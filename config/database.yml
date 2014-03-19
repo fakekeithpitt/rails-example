@@ -2,16 +2,16 @@
 development:
   adapter: mysql2
   database: rails_example_development
-  user: root
+  username: root
   password:
-  host: localhost
+  hostname: localhost
 
 test:
   adapter: mysql2
   database: rails_example_test
-  user: root
+  username: root
   password:
-  host: localhost
+  hostnamd: localhost
 <% else %>
 development:
   adapter: postgresql
