@@ -10,7 +10,8 @@ export TRAVIS_REPO_SLUG=$BUILDBOX_PROJECT_SLUG
 ./script/cached-bundle install --deployment
 
 echo '--- preparing database'
-./bin/rake db:test:prepare
+./bin/rake db:create
+./bin/rake db:schema:load
 
 # echo '--- setting up sphinx'
 # ./bin/rake ts:configure
