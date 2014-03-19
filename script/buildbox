@@ -1,7 +1,5 @@
 #!/bin/bash
-set -x
-
-env
+set -e
 
 echo '--- bundling'
 # export AMAZON_S3_BUCKET=...
