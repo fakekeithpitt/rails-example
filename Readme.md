@@ -2,6 +2,12 @@
 
 Use this as a guide on how to test Rails applications on Buildbox
 
+## Databases
+
+```
+DATABASE_URL=...
+```
+
 ## Installation (OSX)
 
 ```bash
