@@ -7,13 +7,25 @@ desc "Runs the test suite againsts each different environment"
 task :all_specs do
   require 'tempfile'
 
-  script = "#!/bin/bash"
+  script = <<-BASH
+#!/bin/bash
+set -x
+set -e
+BASH
 
-  { "DATABASE_ADAPTER" => %w(mysql postgres) }.each do |key, values|
+  {
+    "DATABASE_ADAPTER" => %w(mysql postgres),
+    "CAPYBARA_DRIVER" => %w(selenium poltergeist webkit)
+  }.each do |key, values|
     values.each do |value|
-      script << "\n#{key}=#{value} ./bin/rspec"
+      script << "#{key}=#{value} ./bin/rspec\n"
     end
   end
+
+  puts "Running script:"
+  puts ""
+  puts script
+  puts ""
 
   tempfile = Tempfile.new('tests.sh')
   tempfile.write(script)

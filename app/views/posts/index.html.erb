@@ -1,0 +1,16 @@
+<% @posts.each do |post| %>
+  <h3><%= post.name %></h3>
+  <%= simple_format post.body %>
+  <h4>Posted <%= post.created_at.to_s(:db) %></h4>
+<% end %>
+
+<hr/>
+
+<%= form_for Post.new do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %><br/>
+
+  <%= f.label :body %>
+  <%= f.text_area :body %><br/>
+  <%= f.submit "Create Post" %>
+<% end %>

@@ -39,6 +39,14 @@ group :development, :test do
 
   # Cleaning db's
   gem 'database_cleaner'
+
+  # For feature tests
+  gem 'capybara'
+
+  # Different ways of running headless tests
+  gem "selenium-webdriver"
+  gem "capybara-webkit"
+  gem "poltergeist"
 end
 
 group :doc do
