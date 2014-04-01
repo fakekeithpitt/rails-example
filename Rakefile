@@ -15,7 +15,7 @@ BASH
 
   {
     "DATABASE_ADAPTER" => %w(mysql postgres),
-    "CAPYBARA_DRIVER" => %w(selenium poltergeist webkit)
+    "CAPYBARA_DRIVER" => %w(firefox chrome poltergeist webkit)
   }.each do |key, values|
     values.each do |value|
       script << "#{key}=#{value} ./bin/rspec\n"
