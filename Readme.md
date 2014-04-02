@@ -22,6 +22,10 @@ poltergeist
 webkit
 ```
 
+### Note about Google Chrome
+
+When spinning up Google Chrome, you need to make sure the `--no-sandbox` argument is passed, otherwise it won't work.
+
 ## Installation (OSX)
 
 ```bash
