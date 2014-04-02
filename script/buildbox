@@ -1,6 +1,8 @@
 #!/bin/bash
 set -e
 
+chromedriver &
+
 echo '--- bundling'
 # export AMAZON_S3_BUCKET=...
 # export AMAZON_ACCESS_KEY_ID=...
