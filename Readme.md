@@ -1,5 +1,6 @@
 # Buildbox Rails Example
 
+
 Use this as a guide on how to test Rails applications on Buildbox
 
 ## Databases
