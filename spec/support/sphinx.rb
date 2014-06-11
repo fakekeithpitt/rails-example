@@ -21,7 +21,7 @@ RSpec.configure do |config|
     ThinkingSphinx::Test.start_with_autostop
   end
 
-  config.before(:each) do
+  config.before(:each) do |example|
     # Index data when running an acceptance spec.
     index if example.metadata[:js]
   end
