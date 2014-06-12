@@ -49,6 +49,9 @@ group :development, :test do
   gem "selenium-webdriver"
   gem "capybara-webkit"
   gem "poltergeist"
+
+  # Code coveage
+  gem 'simplecov', '~> 0.7.1'
 end
 
 group :doc do

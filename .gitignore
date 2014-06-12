@@ -19,3 +19,4 @@
 config/*.sphinx.conf
 log/*.sphinx.pid
 db/sphinx/*
+coverage/**
