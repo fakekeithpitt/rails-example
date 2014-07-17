@@ -1,15 +1,10 @@
 #!/bin/bash
 set -e
 
-google-chrome --version
+# google-chrome --version
 
 echo '--- bundling'
-# export AMAZON_S3_BUCKET=...
-# export AMAZON_ACCESS_KEY_ID=...
-# export AMAZON_SECRET_ACCESS_KEY=...
-export TRAVIS_RUBY_VERSION=`cat .ruby-version`
-export TRAVIS_REPO_SLUG=$BUILDBOX_PROJECT_SLUG
-./script/cached-bundle install --deployment
+bundle
 
 echo '--- preparing database'
 ./bin/rake db:create
