@@ -1,0 +1,17 @@
+app:
+  build: .
+  links:
+    - db:db
+    - redis:redis
+    - memcache:memcache
+  environment:
+    PGHOST: db
+    PGUSER: postgres
+    REDIS_URL: redis://redis
+    MEMCACHE_SERVERS: memcache
+db:
+  image: postgres
+redis:
+  image: redis
+memcache:
+  image: tutum/memcached
