@@ -1,4 +1,4 @@
-# Buildbox Rails Example
+# Buildbox Rails Example (est)
 
 
 Use this as a guide on how to test Rails applications on Buildbox
